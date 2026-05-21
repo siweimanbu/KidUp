@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝宝启蒙乐园</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部标题 -->
+    <div class="header">🌟 宝宝启蒙学习乐园 🌟</div>
+
+    <!-- 分类导航：数学/英语/拼音 -->
+    <div class="nav">
+        <button onclick="switchSubject('math')" class="nav-btn active">数学启蒙</button>
+        <button onclick="switchSubject('english')" class="nav-btn">英语字母</button>
+        <button onclick="switchSubject('pinyin')" class="nav-btn">拼音识字</button>
+    </div>
+
+    <!-- 核心内容区：学习/游戏/考核 切换 -->
+    <div class="container">
+        <!-- 1. 学习模块 -->
+        <div id="study" class="mode-box show">
+            <h2>📖 开始学习</h2>
+            <div id="study-content" class="content-card"></div>
+            <button onclick="startGame()" class="big-btn">🎮 玩游戏巩固</button>
+        </div>
+
+        <!-- 2. 游戏模块 -->
+        <div id="game" class="mode-box">
+            <h2>🎮 趣味小游戏</h2>
+            <div id="game-content" class="content-card"></div>
+            <button onclick="startExam()" class="big-btn">📝 小考核</button>
+        </div>
+
+        <!-- 3. 考核模块 -->
+        <div id="exam" class="mode-box">
+            <h2>📝 小考核</h2>
+            <div id="exam-content" class="content-card"></div>
+            <div class="score">得分：<span id="score">0</span>/100</div>
+            <button onclick="restartStudy()" class="big-btn" id="restart-btn" style="display:none;">🔄 重新学习</button>
+        </div>
+    </div>
+
+    <!-- 引入逻辑 -->
+    <script src="script.js"></script>
+</body>
+</html>
